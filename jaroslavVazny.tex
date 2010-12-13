@@ -1,0 +1,112 @@
+%% start of file `template_en.tex'.
+%% Copyright 2006-1008 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper]{moderncv}
+
+% moderncv themes
+\moderncvtheme[green]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
+%\moderncvtheme[green]{classic}                % idem
+
+% character encoding
+\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+
+% adjust the page margins
+\usepackage[scale=0.8]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
+%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
+\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
+
+% personal data
+\firstname{Jaroslav}
+\familyname{Vážný}
+\title{Resumé title (optional)}               % optional, remove the line if not wanted
+\address{Národní 1088}{54232 Úpice}    % optional, remove the line if not wanted
+\mobile{+420 606776564}                    % optional, remove the line if not wanted
+%\phone{phone (optional)}                      % optional, remove the line if not wanted
+%\fax{fax (optional)}                          % optional, remove the line if not wanted
+\email{jaroslav.vazny@gmail.com}                      % optional, remove the line if not wanted
+%\extrainfo{additional information (optional)} % optional, remove the line if not wanted
+\photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
+%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
+
+%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+\maketitle
+
+\section{Education}
+%\cventry{2009--\phantom{2011}}{Master}{Masaryk University}{Brno}{\textit{Theoretical physics}}{}  % arguments 3 to 6 are optional
+\cventry{2009}{Master}{Masaryk University}{Brno}{\textit{Theoretical physics and Astrophysics}}{}  % arguments 3 to 6 are optional
+\cventry{2006--2009}{Bachelor}{Masaryk University}{Brno}{\textit{Astrophysics}}{}  % arguments 3 to 6 are optional
+%\cventry{1996--2000}{DiS}{Masaryk University}{Brno}{\textit{Astrophysics}}{}  % arguments 3 to 6 are optional
+\section{Bachelor's thesis}
+\cvline{title}{\emph{Data Mining from Astronomical Data}}
+\cvline{supervisors}{Mgr. Filip Hroch, Ph.D}
+\cvline{description}{\small My Bachelor's thesis deals with data mining
+  methods in the context of astrophysics. Possible data sources, data
+  mining methods (classification trees and clustering) and
+  corresponding technologies are discussed. Practical part of this
+  work is focused on classification BL Lac objects based on spectral
+  characteristics in the Sloan Digital Survey data warehouse}
+
+\section{Experience}
+\subsection{Vocational}
+\cventry{2000--2006}{Programmer, Oracle DBA}{Infineon Technologies Trutnov, s. r. o.}{Trutnov}{}{}                % arguments 3 to 6 are optional
+\cventry{1999}{Programmer}{ABB}{Trutnov}{}{}                % arguments 3 to 6 are optional
+%\subsection{Miscellaneous}
+%\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}% arguments 3 to 6 are optional
+
+\section{Languages}
+\cvlanguage{English}{Advanced}{}
+\cvlanguage{Russian}{Beginner}{}
+%\cvlanguage{language 3}{Skill level}{}
+
+\section{Computer skills}
+\cvcomputer{Programming}{C\#, SQL,PL/SQL, Matlab, Octave,Root,R, Bash}{}{}
+\cvcomputer{Database Administration}{Oracle, Gupta}{}{}
+\cvcomputer{System Administration}{Linux}{}{}
+\cvcomputer{Typography}{\LaTeX}{}{}
+
+
+\renewcommand{\listitemsymbol}{-} % change the symbol for lists
+
+\section{Trainnings}
+\cvlistitem{Oracle 8i -- Database Administration}
+\cvlistitem{Oracle 8i -- Backup And Recovery}
+\cvlistitem{Oracle 9i -- Crashes And Corruptions}
+\cvlistitem{Design in OOP and UML}
+\cvlistitem{Object Oriented Programming, UML}
+\cvlistitem{Visual C\# .NET}
+\cvlistitem{REFA compact seminar}
+\cvlistitem{PL/SQL (Germany)}
+\cvlistitem{English (Intensive, Angloschool, London)}
+
+\section{Interests}
+\cvline{Theoretical physics}{Lagrangian and Hamiltonian formulation}
+\cvline{Computer Science}{UN*X systems}
+\cvline{Astrophysics}{AGN}
+
+
+%\section{Extra 2}
+%\cvlistdoubleitem[\Neutral]{Item 1}{Item 4}
+%\cvlistdoubleitem[\Neutral]{Item 2}{Item 5}
+%\cvlistdoubleitem[\Neutral]{Item 3}{}
+
+% Publications from a BibTeX file
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{publications}       % 'publications' is the name of a BibTeX file
+
+\end{document}
+
+
+%% end of file `template_en.tex'.
