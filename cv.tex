@@ -1,141 +1,81 @@
-%% start of file `template_en.tex'.
-%% Copyright 2006-1008 Xavier Danaux (xdanaux@gmail.com).
-%
-% This work may be distributed and/or modified under the
-% conditions of the LaTeX Project Public License version 1.3c,
-% available at http://www.latex-project.org/lppl/.
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[english,czech]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+\usepackage{times}
+%\usepackage{fullpage}
+% \usepackage[colorlinks=false]{hyperref}
+\usepackage[NoDate,LabelsAligned]{currvita}
+\usepackage{array}
+\usepackage{comment}
+%\usepackage[pdftex,a4paper, total={15.3cm,23cm}, top=2.5cm, left=2.8cm, includefoot]{geometry}
+\usepackage[pdftex,a4paper, total={15.4cm,23cm}, top=3.8cm, left=2.8cm, includefoot]{geometry}
+\usepackage{fancyhdr}                           %custom footer
+\pagestyle{fancy}
+\usepackage{lettrine}
+\usepackage{wrapfig}
+\usepackage{graphicx}
+\usepackage{multirow}
+\usepackage{fancyhdr}
+\usepackage{lettrine}
+\usepackage{natbib}
+\usepackage{multicol}
+\usepackage{a4wide}
+\usepackage{wrapfig}
+
+% \fancyhf{}
+\renewcommand{\headrulewidth}{5pt}
+
+\usepackage{color}
+  \usepackage[colorlinks,hyperindex,plainpages=false,pdftex, linkcolor=black,citecolor=black,urlcolor=black,pagecolor=black]{hyperref}
+  \def\pdfBorderAttrs{/Border [0 0 0] } % bez okrajù kolem odkazù
+  \pdfcompresslevel=9
+
+% Better for lists with 1-2 items and short descriptions
+\newenvironment{sublist}{%
+	\begin{list}{}{%
+		\setlength{\itemsep}{0em}\setlength{\parsep}{0em}%
+		\setlength{\topsep}{0em}\setlength{\parskip}{0em}%
+	}%
+}%
+{ \end{list} }
+
+% Better for lists with more than 2 items and/or long descriptions
+\newenvironment{subbulletlist}{%
+	\begin{list}{\labelitemii}{%
+		\setlength{\topsep}{\itemsep}\setlength{\parskip}{\parsep}%
+	}%
+}%
+{ \end{list} }
+%\newcommand\uv[1]{\quotedblbase \,#1\textquotedblleft}
 
 
-\documentclass[11pt,a4paper]{moderncv}
+% \pagestyle{empty}
+% \pagestyle{fancy}
+\hyphenation{UNIX -- Programming}
 
-% moderncv themes
-\moderncvtheme[green]{casual}                 % optional argument are 'blue' (default), 'orange', 'red', 'green', 'grey' and 'roman' (for roman fonts, instead of sans serif fonts)
-%\moderncvtheme[green]{classic}                % idem
+\renewcommand{\headrulewidth}{5pt} % tloušťka linky
 
-% character encoding
-\usepackage[utf8]{inputenc}                   % replace by the encoding you are using
+% \fancyhf{} % smaže aktuální nastavení záhlaví a zápatí
+% \fancyhead[LE,RO]{\bf } 
+% \fancyhead[LO]{\bfseries\rightmark}
+% \fancyhead[RE]{\bfseries\leftmark}
+\lhead{Jaroslav Vážný}
+%\rhead{{{Brno PhD Talent 2011}}}
+\renewcommand{\headrulewidth}{0.7pt} % tloušťka linky
+\renewcommand{\footrulewidth}{0pt}   % patička chybí
+\addtolength{\headheight}{0.7cm} % prostor pro záhlaví
 
-% adjust the page margins
-\usepackage[scale=0.8]{geometry}
-%\setlength{\hintscolumnwidth}{3cm}						% if you want to change the width of the column with the dates
-%\AtBeginDocument{\setlength{\maketitlenamewidth}{6cm}}  % only for the classic theme, if you want to change the width of your name placeholder (to leave more space for your address details
-\AtBeginDocument{\recomputelengths}                     % required when changes are made to page layout lengths
-
-% personal data
-\firstname{Jaroslav}
-\familyname{Vážný}
-\title{Resumé title (optional)}               % optional, remove the line if not wanted
-\address{Národní 1088}{54232 Úpice}    % optional, remove the line if not wanted
-\mobile{+420 606776564}                    % optional, remove the line if not wanted
-%\phone{phone (optional)}                      % optional, remove the line if not wanted
-%\fax{fax (optional)}                          % optional, remove the line if not wanted
-\email{jaroslav.vazny@gmail.com}                      % optional, remove the line if not wanted
-%\extrainfo{additional information (optional)} % optional, remove the line if not wanted
-\photo[64pt]{picture}                         % '64pt' is the height the picture must be resized to and 'picture' is the name of the picture file; optional, remove the line if not wanted
-%\quote{Some quote (optional)}                 % optional, remove the line if not wanted
-
-%\nopagenumbers{}                             % uncomment to suppress automatic page numbering for CVs longer than one page
+\newlength{\oldcvlabelwidth}
+\newlength{\oldcvlabelsep}
 
 
-%----------------------------------------------------------------------------------
-%            content
-%----------------------------------------------------------------------------------
+
+
 \begin{document}
-\maketitle
-
-\section{Statement of Purpose}
-\vspace{5mm}
-\setlength{\parindent}{5mm}
-
-\noindent Before Astrophysics I used to study Computer Science. Then I worked as
-a database administrator and the chief programmer for Infineon
-Technologies. Here I wrote approximately dozens of programs for manufacturing
-optical transievers. After six year the company was sold to the
-Finisar Corporation and I used that opportunity to change my field of
-interest to something more elegant and interesting.
-
-
-\indent During my studies of Astrophysics at Masaryk University I have attended
-many courses beyond the standard curriculum. I took more maths, physics and
-programming, Latex and UN*X.
-
-
-\indent My Bachelors thesis focused on data mining and massive data
-processing. Using data mining classification algorithms (C-4.5) I
-tried to find new BL Lac candidates based on spectral characteristics
-in the Sloan Digital Survey.
-
-
-\indent During my Master studies I am focusing on Virtual Observatory and
-related technologies. I attended AIDA VO School at Strasbourg. I also
-participated in the Summer Students 2010 program at CERN. Here I
-worked on CLIC (Compact Linear Collieder) project. During these three
-months I also attended many courses on particle physics,
-statistics, cosmology, etc. It was the most productive and interesting
-summer of my life.
-
-
-\indent I used to work abroad (Germany, USA, Malaysia). My interests are
-Computer Science and Theoretical Physics.
-
-
-\indent All my professional life I have been trying to unite the world of
-physics and computers. Intelligent usage of computers, as I believe, is
-crucial in the modern astrophysics and not only because we are
-currently facing a data avalanche. Such symbiosis can lead to better
-understanding of the Universe.
-
-\newpage
-
-\section{Education}
-%\cventry{2009--\phantom{2011}}{Master}{Masaryk University}{Brno}{\textit{Theoretical physics}}{}  % arguments 3 to 6 are optional
-\cventry{2009}{Master}{Masaryk University}{Brno}{\textit{Theoretical physics and Astrophysics}}{}  % arguments 3 to 6 are optional
-\cventry{2006--2009}{Bachelor}{Masaryk University}{Brno}{\textit{Astrophysics}}{}  % arguments 3 to 6 are optional
-%\cventry{1996--2000}{DiS}{Masaryk University}{Brno}{\textit{Astrophysics}}{}  % arguments 3 to 6 are optional
-\section{Bachelor's thesis}
-\cvline{title}{\emph{Data Mining from Astronomical Data}}
-\cvline{supervisors}{Mgr. Filip Hroch, Ph.D}
-\section{Diploma thesis}
-\cvline{title}{\emph{Study of Astronomical Objects using Virtual Observatory}}
-\cvline{supervisors}{RNDr. Petr Škoda, CSc}
-
-
-\section{Experience}
-\subsection{Vocational}
-\cventry{2010}{The CERN Summer Student Program}{working on CLIC project}{}{}{}                % arguments 3 to 6 are optional
-\cventry{2010}{EuroVO-AIDA School 2010}{Strasbourg}{}{}{}                % arguments 3 to 6 are optional
-\cventry{2000--2006}{Programmer, Oracle DBA}{Infineon Technologies Trutnov, s. r. o.}{Trutnov}{}{}                % arguments 3 to 6 are optional
-\cventry{1999}{Programmer}{ABB}{Trutnov}{}{}                % arguments 3 to 6 are optional
-%\subsection{Miscellaneous}
-%\cventry{year--year}{Job title}{Employer}{City}{}{Description line 1\newline{}Description line 2}% arguments 3 to 6 are optional
-
-\section{Languages}
-\cvlanguage{English}{Advanced}{}
-\cvlanguage{Russian}{Beginner}{}
-%\cvlanguage{language 3}{Skill level}{}
-
-\section{Computer skills}
-\cvcomputer{Programming}{Python, Git, C\#, C, Fortran, SQL, PL/SQL,
-  Matlab, Root, R, Bash}{}{} \cvcomputer{Databases}{Oracle, Gupta}{}{}
-\cvcomputer{Systems}{Linux, UN*X}{}{}
-\cvcomputer{Typography}{\LaTeX}{}{}
-
-
-\renewcommand{\listitemsymbol}{-} % change the symbol for lists
-
-
-
-%\section{Extra 2}
-%\cvlistdoubleitem[\Neutral]{Item 1}{Item 4}
-%\cvlistdoubleitem[\Neutral]{Item 2}{Item 5}
-%\cvlistdoubleitem[\Neutral]{Item 3}{}
-
-% Publications from a BibTeX file
-\nocite{*}
-\bibliographystyle{plain}
-\bibliography{publications}       % 'publications' is the name of a BibTeX file
+\include{text}
+%\include{project}
+%\include{supervisor}
 
 \end{document}
-
-
-%% end of file `template_en.tex'.
